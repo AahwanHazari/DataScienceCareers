@@ -1,0 +1,507 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('body.png');
+    color: #333;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;  /* Ensure the text color is white */
+    padding: 60px 0;
+    text-align: center;
+    border: white;
+}
+
+/* Dark overlay for better contrast */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    z-index: 0; /* Overlay layer */
+}
+
+/* Ensure text appears above the overlay */
+header h1, header p {
+    position: relative;
+    z-index: 1; /* Text layer above overlay */
+    color: white; /* Ensure the text color is white */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adding stronger shadow for readability */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav li {
+    display: inline;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 60px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-box {
+    background-color: #ffca28;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: scale(1.1);
+}
+
+#interactive {
+    background-image: url('explorebg.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 60px; /* Add padding for content */
+    color: white; /* Make the text readable on the background */
+    text-align: center; /* Center the content */
+}
+
+#interactive h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: yellow; /* Ensure the text is visible against the background */
+    margin-bottom: 20px;
+}
+
+.interactive-box {
+    background-color: rgba(255, 255, 255, 0.7); /* Light background for the box */
+    padding: 30px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 0 auto;
+    width: 60%; /* Control the width of the interactive box */
+}
+
+.interactive-box:hover {
+    background-color: #f06292; /* Hover effect */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #5c6bc0;
+    color: white;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3949ab;
+}
+
+footer {
+    background-color: #444;
+    color: white;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+}
+
+#skills-section {
+    display: flex;
+    flex-wrap: wrap; /* Keeps the buttons in two rows */
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 10px; /* Space between the buttons */
+    padding: 20px;
+    background: linear-gradient(135deg, #4EE4DF, #4E67E5);
+    transition: background 0.5s ease; /* Smooth transition for background change */
+    color: white;
+
+}
+
+#skills-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    font-size: 2rem; /* Increase the font size */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center align the heading */
+    width: 100%; /* Ensures heading takes the full width */
+}
+
+.skill-btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    margin: 10px; /* Space between buttons */
+    width: 200px; /* Control the button width to make them fit well */
+}
+
+.skill-btn:hover {
+    transform: scale(1.1);
+}
+
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+.scroll-to-top:hover {
+    background-color: #3949ab;
+}
+
+/* Parallax effect */
+.parallax {
+    background-image: url('headerbg.jpg');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Modal (Popup) Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Background color with opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 25px;
+    top: 0;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#contact {
+    background-image: url('mailbg.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 60px; /* Add padding for content */
+    color: white; /* Make the text readable on the background */
+}
+
+#contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: black; /* Ensure the text is visible against the background */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the form background for readability */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #5c6bc0;
+    color: white;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3949ab;
+}
+
+/* Style for the popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 80%;
+    text-align: center;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button for the pop-up */
+.popup-close {
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.popup-close:hover {
+    background-color: #f50057;
+}
+
+#overview {
+    background: linear-gradient(135deg, #4EE4DF, #4E67E5);
+    background-size: cover; /* Make sure the image covers the section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 60px; /* Add padding to the section for better spacing */
+    color: white; /* Ensure the text is visible */
+    text-align: center; /* Center the content */
+    transition: background 0.5s ease-in-out;
+}
+
+#overview:hover {
+    background: linear-gradient(135deg, #D20103, #FEA5EC); /* New gradient on hover */
+}
+@keyframes rainbowText {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+#overview h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    animation: rainbowText 5s linear infinite; /* Apply rainbow effect */
+}
+
+#overview p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: rainbowText 5s linear infinite; /* Apply rainbow effect to paragraph text too */
+}
+
+
+#overview p {
+    font-size: 1.5rem; /* Make the paragraph text larger */
+    line-height: 1.6;
+    font-weight: 500; /* Make the paragraph text bold */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow to the paragraph text */
+}
+
+#skills{
+    background: linear-gradient(135deg, #4EE4DF, #4E67E5);
+    transition: background 0.5s ease; /* Smooth transition for background change */
+    padding: 60px;
+    color: white;
+}
+
+#skills:hover {
+    background: linear-gradient(135deg, #F06C6C, #F0B36C); /* New gradient on hover */
+}
+
+#skills-section:hover {
+    background: linear-gradient(135deg, #21A612, #ABF875); /* New gradient on hover */
+}
+
+#data-facts {
+    background: linear-gradient(135deg, #4EE4DF, #4E67E5);
+    transition: background 0.5s ease; /* Smooth transition for background change */
+    padding: 60px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#data-facts h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.fact {
+    background-color: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fact h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.fact p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.fact span {
+    font-size: 1rem;
+    color: #888;
+}
+
+.fact:hover {
+    transform: scale(1.05); /* Slightly enlarge the fact on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    background-color: #f9f9f9; /* Lighten the background color on hover */
+}
+
+#data-facts:hover {
+    background: linear-gradient(135deg, #F875EB, #F8E075); /* New gradient on hover */
+}
+
+.form-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* This is for a 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.form-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+#iframe {
+    border: dashed;
+    border-color: black;
+    border-radius: 75;
+    border-width: 5px;
+    padding: 5px;
+}
