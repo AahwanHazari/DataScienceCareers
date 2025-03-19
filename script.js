@@ -106,6 +106,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     // FAQ data
+    // Dark Mode Toggle
+    const darkModeToggle = document.createElement("button");
+    darkModeToggle.id = "darkModeToggle";
+    darkModeToggle.innerText = "🌙 Dark Mode";
+    document.body.appendChild(darkModeToggle);
+
+    const body = document.body;
+    
+    // Check for saved mode in local storage
+    if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        darkModeToggle.innerText = "☀️ Light Mode";
+    }
+
+    darkModeToggle.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+        const isDarkMode = body.classList.contains("dark-mode");
+
+    // Save preference
+        localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
+
+    // Change button text
+        darkModeToggle.innerText = isDarkMode ? "☀️ Light Mode" : "🌙 Dark Mode";
+    });
+
     const faqData = {
         "What is Data Science?": "Data Science is an interdisciplinary field that uses statistics, machine learning, and data analysis to extract insights and knowledge from data.",
         "How does AI learn?": "AI learns by analyzing patterns in data, using algorithms to improve over time. Machine Learning is a common method for training AI models.",
@@ -113,14 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "Is Cloud Computing necessary for AI?": "Cloud computing provides scalable storage and processing power, making it essential for training large AI models and handling big data efficiently.",
         "How do I start learning Machine Learning?": "Start with Python, learn the basics of statistics, then move on to machine learning libraries like TensorFlow, Scikit-learn, and PyTorch."
     };
-
-    // Add FAQs section dynamically
-    const faqSection = document.createElement("section");
-    faqSection.innerHTML = `
-        <h2>Frequently Asked Questions (FAQs)</h2>
-        <div id="faq-container"></div>
-    `;
-    document.body.appendChild(faqSection);
 
     const faqContainer = document.getElementById("faq-container");
 
