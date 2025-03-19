@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let resultPopup = document.getElementById("quizResultPopup");
     let resultText = document.getElementById("quizResultText");
     let closePopupBtn = document.getElementById("closeQuizPopup");
+    let startTimerBtn = document.getElementById("startTimer"); // Start Timer Button
 
     const correctAnswers = {
         q1: "A",
@@ -183,11 +184,18 @@ document.addEventListener("DOMContentLoaded", function () {
         q5: "A"
     };
 
+    let timerInterval; // Store timer reference
+
     // Timer Function
     function startTimer() {
-        let timer = setInterval(function () {
+        clearInterval(timerInterval); // Clear any existing timer
+        timeLeft = 60; // Reset time
+        timerDisplay.innerText = `Time Left: ${timeLeft}s`;
+
+        timerInterval = setInterval(function () {
             if (timeLeft <= 0) {
-                clearInterval(timer);
+                clearInterval(timerInterval);
+                alert("Time's up! Submitting your answers.");
                 submitQuiz(); // Auto-submit when time is up
             }
             timerDisplay.innerText = `Time Left: ${timeLeft}s`;
@@ -195,11 +203,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000);
     }
 
-    // Start the timer when the page loads
-    startTimer();
+    // Attach Start Timer Button Event
+    if (startTimerBtn) {
+        startTimerBtn.addEventListener("click", startTimer);
+    }
 
     // Quiz Submission Function
     function submitQuiz() {
+        clearInterval(timerInterval); // Stop timer when submitting
         let score = 0;
         document.querySelectorAll(".quiz-question").forEach((question, index) => {
             let selectedOption = question.querySelector("input:checked");
@@ -216,8 +227,6 @@ document.addEventListener("DOMContentLoaded", function () {
         resultPopup.style.display = "block";
         document.getElementById('quiz-result').style.display = 'block';
         document.getElementById('quiz-result').style.display = 'flex';
-
-
     }
 
     // Submit Button Click Event
