@@ -41,8 +41,14 @@
             <h3>55+</h3>
             <p>BIG Industries hiring data professionals worldwide.</p>
         </div>
-        <h6>Sources <br> https://www.indeed.com/career/data-scientist/salaries<br>https://365datascience.com/career-advice/career-guides/data-scientist-job-outlook-2025/<br>https://builtin.com/articles/companies-hiring-data-scientists</h6>
-        <h6> Consider checking them out for more information too! </h6>
+        <h6>Sources</h6>
+        <div style="text-align: left;">
+            <a href="https://www.indeed.com/career/data-scientist/salaries">https://www.indeed.com/career/data-scientist/salaries</a><br>
+            <a href="https://365datascience.com/career-advice/career-guides/data-scientist-job-outlook-2025/">https://365datascience.com/career-advice/career-guides/data-scientist-job-outlook-2025/</a><br>
+            <a href="https://builtin.com/articles/companies-hiring-data-scientists">https://builtin.com/articles/companies-hiring-data-scientists</a>
+        </div>
+
+<h6>Consider checking them out for more information too!</h6>
     </section>
 
 
@@ -86,8 +92,81 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/X3paOmcrTjQ?si=7Fuc7fI7cUmG62Qd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
+    <section id="faq-section">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div id="faq-container">
+        <!-- FAQ buttons will be added dynamically -->
+        </div>
+    </section>
+    <section id="quizSection">
+        <h2>How much do you know about Data Science?</h2>
+        <p id="timer">Time Left: 60s</p>
+
+        <div id="quizContainer">
+        <!-- Question 1 -->
+            <div class="quiz-question">
+                <p>1. What does AI stand for?</p>
+                <label><input type="radio" name="q1" value="A"> Artificial Intelligence</label>
+                <label><input type="radio" name="q1" value="B"> Automated Internet</label>
+                <label><input type="radio" name="q1" value="C"> Advanced Innovation</label>
+                <label><input type="radio" name="q1" value="D"> Algorithmic Information</label>
+            </div>
+
+        <!-- Question 2 -->
+            <div class="quiz-question">
+                <p>2. Which programming language is widely used for Machine Learning?</p>
+                <label><input type="radio" name="q2" value="A"> Java</label>
+                <label><input type="radio" name="q2" value="B"> Python</label>
+                <label><input type="radio" name="q2" value="C"> C++</label>
+                <label><input type="radio" name="q2" value="D"> Swift</label>
+            </div>
+
+        <!-- Question 3 -->
+            <div class="quiz-question">
+                <p>3. What is the primary goal of Data Science?</p>
+                <label><input type="radio" name="q3" value="A"> Building Websites</label>
+                <label><input type="radio" name="q3" value="B"> Playing Video Games</label>
+                <label><input type="radio" name="q3" value="C"> Extracting Insights from Data</label>
+                <label><input type="radio" name="q3" value="D"> Writing Books</label>
+            </div>
+
+        <!-- Question 4 -->
+            <div class="quiz-question">
+                <p>4. What does NLP stand for in AI?</p>
+                <label><input type="radio" name="q4" value="A"> Neural Language Processing</label>
+                <label><input type="radio" name="q4" value="B"> Natural Learning Program</label>
+                <label><input type="radio" name="q4" value="C"> Network Linked Processes</label>
+                <label><input type="radio" name="q4" value="D"> Natural Language Processing</label>
+            </div>
+
+        <!-- Question 5 -->
+            <div class="quiz-question">
+                <p>5. Which of these is a cloud computing platform?</p>
+                <label><input type="radio" name="q5" value="A"> AWS</label>
+                <label><input type="radio" name="q5" value="B"> Photoshop</label>
+                <label><input type="radio" name="q5" value="C"> Excel</label>
+                <label><input type="radio" name="q5" value="D"> Windows XP</label>
+            </div>
+
+        <!-- Submit Button -->
+            <button id="submitQuiz">Submit Quiz</button>
+        </div>
+
+    <!-- Quiz Result Popup -->
+        <div id="quizResultPopup" class="quiz-popup">
+            <div class="quiz-popup-content">
+                <span id="closeQuizPopup" class="close-btn">&times;</span>
+                <h3>Quiz Results</h3>
+                <p id="quizResultText"></p>
+            </div>
+        </div>
+    </section>
+
+
+
     <section id="contact">
         <h2>📩 Get in Touch</h2>
+        <h3 style="color:black;">Want to know more? Contact us and we will guide you!</h3>
         <form
              action="https://formspree.io/f/xanenaye"
              method="POST">
